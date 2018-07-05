@@ -18,6 +18,10 @@ public class Client1 : MonoBehaviour {
         {
             audioManager.SoundPlay(audioSource, "test2");
         }
+        if (Input.GetKeyDown(KeyCode.Alpha5))
+        {
+            audioManager.MusicPlay("main3");
+        }
 
     }
 }

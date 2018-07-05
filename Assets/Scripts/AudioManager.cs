@@ -4,18 +4,20 @@ using UnityEngine;
 using UnityEngine.UI;
 
 [CreateAssetMenu]
+
 public class AudioManager : ScriptableObject {
 
     [SerializeField] private List<Audio> audioList = new List<Audio>();
+    [SerializeField] private Main main;
 
-    private AudioSource musicPlayer;
+    private MusicPlayer musicPlayer;
 
     private float soundVolume;
     private float musicVolume;
-    
+
     public interface audioSoureHandler
     {
-
+       
     }
     private void OnEnable()
     {
@@ -47,25 +49,13 @@ public class AudioManager : ScriptableObject {
             if (audio.ID == audioID)
             {
                 if (musicPlayer == null)
-                    InitMusicPlayer();
+                  musicPlayer = main.GetMusicPlayer();
 
-                musicPlayer.clip = audio.clip;
-                musicPlayer.loop = true;
-                musicPlayer.volume = musicVolume;
-
-                musicPlayer.Play(0);
+                Debug.Log(musicPlayer)
+;                musicPlayer.SetMusic(audio.clip, true, musicVolume);
 
             }
         }
-    }
-
-    private void InitMusicPlayer()
-    {
-        GameObject tmp = new GameObject("MusicPlayer");
-
-        tmp.AddComponent<AudioSource>();
-        musicPlayer = tmp.GetComponent<AudioSource>();
-        DontDestroyOnLoad(musicPlayer);
     }
 
     public void SoundVolumeChanged(float volume)
@@ -76,10 +66,10 @@ public class AudioManager : ScriptableObject {
     public void MusicVolumeChanged(float volume)
     {
         if (musicPlayer == null)
-            InitMusicPlayer();
+            musicPlayer = main.GetMusicPlayer();
 
         musicVolume = volume;
-        musicPlayer.volume = volume;
+        musicPlayer.SetMusicVolume(volume);
     }
 
 
