@@ -16,12 +16,11 @@ public class Client1 : MonoBehaviour {
 
         if (Input.GetKeyDown(KeyCode.Alpha2))
         {
-            audioManager.SoundPlay(audioSource, "test2");
+            audioManager.SoundPlay(audioSource, "Laser");
         }
-        if (Input.GetKeyDown(KeyCode.Alpha5))
+        if (Input.GetKeyDown(KeyCode.Alpha4))
         {
-            audioManager.MusicPlay("main3");
+            audioManager.SoundPlay(audioSource, "sans");
         }
-
     }
 }

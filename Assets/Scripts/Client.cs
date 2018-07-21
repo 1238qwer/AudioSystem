@@ -15,16 +15,13 @@ public class Client : MonoBehaviour {
 	void Update () {
 		if (Input.GetKeyDown(KeyCode.Alpha1))
         {
-            audioManager.SoundPlay(audioSource, "test");
+            audioManager.SoundPlay(audioSource, "Buzzer");
         }
 
         if (Input.GetKeyDown(KeyCode.Alpha3))
         {
-            audioManager.MusicPlay("main");
+            audioManager.SoundPlay(audioSource,"metal");
         }
-        if (Input.GetKeyDown(KeyCode.Alpha4))
-        {
-            audioManager.MusicPlay("main2");
-        }
+
     }
 }

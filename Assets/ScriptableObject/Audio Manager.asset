@@ -12,9 +12,7 @@ MonoBehaviour:
   m_Name: Audio Manager
   m_EditorClassIdentifier: 
   audioList:
-  - {fileID: 11400000, guid: 4996f9558c3267f40b7e4b8995556d32, type: 2}
-  - {fileID: 11400000, guid: f86ccc9efa461e8428f5712088e43925, type: 2}
-  - {fileID: 11400000, guid: e257dc9df70047f44b5c3ebb71d8e45e, type: 2}
-  - {fileID: 11400000, guid: f98c7b9aaa19d714f9cc8c52238012b4, type: 2}
-  - {fileID: 11400000, guid: 190ad5a5d0bacb348a43ded56defb216, type: 2}
-  main: {fileID: 11400000, guid: 83a5ee8a05e2613409a7158497e0df77, type: 2}
+  - {fileID: 8300000, guid: cd99601e4efd35948adc5ed9f8e6c108, type: 3}
+  - {fileID: 8300000, guid: 875e72cc32f99c74488cd5bb13c80816, type: 3}
+  - {fileID: 8300000, guid: 2ade1207df88f1e4aa7bf60a95d251e9, type: 3}
+  - {fileID: 8300000, guid: 7fb563de6f778954e943902749c662fc, type: 3}
